@@ -1,0 +1,17 @@
+{
+  "name": "semana-inverter",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start"
+  },
+  "dependencies": {
+    "lucide-react": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {}
+}
