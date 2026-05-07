@@ -104,6 +104,34 @@ h1 strong {
   color: var(--green);
 }
 
+.cta-hero {
+  width: min(100%, 430px);
+  min-height: 62px;
+  margin: 0 auto 16px;
+  font-size: clamp(16px, 3.5vw, 20px);
+}
+
+.trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 30px;
+  color: #d8ddd9;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.trust-row span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
 .photo-card,
 .content-card,
 .proof-card,
@@ -217,6 +245,55 @@ h1 strong {
 
 .compact {
   margin-bottom: 24px;
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.value-item {
+  min-height: 118px;
+  padding: 18px;
+  border: 1px solid rgba(25, 229, 116, 0.2);
+  border-radius: 12px;
+  background: rgba(32, 33, 32, 0.78);
+}
+
+.value-item svg {
+  color: var(--green);
+  margin-bottom: 12px;
+}
+
+.value-item p {
+  margin: 0;
+  color: #d9dfda;
+  line-height: 1.35;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.objection-card {
+  border-color: rgba(244, 194, 13, 0.22);
+}
+
+.objection-card ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.objection-card li {
+  padding: 13px 14px;
+  border-left: 3px solid var(--yellow);
+  border-radius: 8px;
+  color: #d8ddd9;
+  background: rgba(244, 194, 13, 0.08);
+  line-height: 1.45;
 }
 
 .proof-card {
@@ -362,6 +439,14 @@ h1 strong {
   gap: 6px;
 }
 
+.microcopy {
+  width: min(100%, 430px);
+  margin: 12px auto 10px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
 .downsell-link {
   margin-top: 4px;
   color: #b8b8b8;
@@ -414,5 +499,13 @@ footer {
   .benefits {
     flex-direction: column;
     gap: 8px;
+  }
+
+  .value-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .value-item {
+    min-height: auto;
   }
 }

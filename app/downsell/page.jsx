@@ -1,6 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Check, Clock3, Flame } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  Check,
+  Clock3,
+  Flame,
+  ShieldCheck
+} from "lucide-react";
 
 export const metadata = {
   title: "Oferta Mensal",
@@ -14,9 +21,9 @@ export const metadata = {
 };
 
 const planItems = [
-  "Acesso mensal a versao reduzida do treinamento",
-  "Metade dos produtos da oferta completa",
-  "Aulas praticas para iniciar nos consertos de inversores",
+  "Entrada mensal para comecar com menor investimento",
+  "Versao reduzida do conteudo principal",
+  "Aulas praticas para dar os primeiros passos em inversores",
   "Conteudo direto ao ponto para aplicar na bancada"
 ];
 
@@ -27,27 +34,27 @@ export default function Downsell() {
         <section className="hero downsell-hero">
           <p className="pill">
             <Flame size={14} aria-hidden="true" />
-            Ultima chance - plano mais leve
+            Alternativa mais leve liberada
           </p>
           <h1>
-            Espere.
-            <span className="danger">Nao saia ainda.</span>
-            Comece com a versao mensal por <strong>R$18,99</strong>
+            Antes de sair,
+            <span className="danger">comece menor</span>
+            por apenas <strong>R$18,99/mes</strong>
           </h1>
           <p className="subtitle">
-            Se a oferta completa de R$27,90 nao era o melhor momento pra voce,
-            liberei uma entrada mais barata: <b>metade dos produtos</b>, mensal,
-            para voce comecar sem travar.
+            Se a oferta completa ainda nao encaixou para voce, esta e uma forma
+            mais leve de entrar, testar o conteudo e comecar a evoluir nos
+            reparos de inversores sem travar por preco.
           </p>
         </section>
 
         <section className="content-card story-card">
-          <h2>Voce ainda pode comecar hoje</h2>
+          <h2>O pior cenario e continuar adiando</h2>
           <p>
-            O objetivo e simples: te colocar em movimento. Com o plano mensal,
-            voce recebe uma versao reduzida da Semana Inverter, focada no
-            essencial para comecar a entender defeitos, praticar melhor e parar
-            de depender so de servicos baratos.
+            Quando o tecnico adia, ele continua recusando servicos melhores e
+            aceitando apenas reparos de baixo valor. O plano mensal existe para
+            voce sair da inercia com uma entrada mais acessivel e aprender o
+            essencial primeiro.
           </p>
           <Image
             className="story-image"
@@ -74,6 +81,10 @@ export default function Downsell() {
         </section>
 
         <section className="offer-card downsell-offer" id="oferta-mensal">
+          <div className="best-seller">
+            <ShieldCheck size={16} aria-hidden="true" />
+            Entrada flexivel
+          </div>
           <p className="offer-label">Sua alternativa mensal</p>
           <p className="old-price">Oferta completa: R$27,90</p>
           <span>comece por apenas</span>
@@ -81,7 +92,7 @@ export default function Downsell() {
           <small>Plano mensal - metade dos produtos</small>
           <p className="warning">
             <Clock3 size={18} aria-hidden="true" />
-            Esta e a ultima alternativa antes de sair da pagina.
+            Esta condicao mensal pode nao ficar disponivel depois que voce sair.
           </p>
           <a
             className="cta"
@@ -89,8 +100,11 @@ export default function Downsell() {
             aria-label="Assinar plano mensal por R$18,99"
           >
             <ArrowRight size={26} aria-hidden="true" />
-            Quero comecar por R$18,99/mes
+            Quero comecar agora por R$18,99/mes
           </a>
+          <p className="microcopy">
+            Uma entrada menor para quem quer aprender primeiro e decidir depois.
+          </p>
           <Link className="downsell-link return-link" href="/">
             <ArrowLeft size={14} aria-hidden="true" />
             Voltar para a oferta completa de R$27,90
